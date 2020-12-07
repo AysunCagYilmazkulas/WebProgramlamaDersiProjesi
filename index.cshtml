@@ -1,0 +1,17 @@
+@page
+@using WebProgramlama.WebSite.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Istanbul Guzellik Merkezleri</h1>
+    <p>Sakarya Universitesi Web Programlama Dersi Proje Odevidir. <a href="https://www.sakarya.edu.tr/">SAU</a>.</p>
+</div>
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+
+
+<script src="_framework/blazor.server.js"></script>
